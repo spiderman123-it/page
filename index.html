@@ -87,12 +87,20 @@
             margin: 0px 10px 0px 0px;
         }
     </style>
+    <script>
+        let a = [
+             {'name':'영수','age':27 },
+             {'name':'철수','age':15 },
+             {'name':'영희','age':20 }   
+    ]
+        console.log(a[1]['age'])
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>내 생의 최고의 영화들</h1>
-        <button>영화 기록하기</button>
+        <button onclick="hey()">영화 기록하기</button>
 
     </div>
     <div class="mypost">
@@ -100,6 +108,17 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화URL</label>
         </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>--기록하기--</option>
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐⭐⭐</option>
+            </select>
+          </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">코멘트</label>
